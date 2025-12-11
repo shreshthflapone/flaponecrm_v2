@@ -1,0 +1,389 @@
+.dashboard {
+  padding: 16px;
+  color: #333;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.stat-box-dashboard {
+  border: solid 2px #16a249;
+  transition-duration: .3s;
+}
+
+.stat-box-dashboard.yellow{
+    border-color: #f8c630;
+}
+
+
+.stat-box h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #88939c;
+  font-weight: 700;
+}
+.stat-box-dashboard p {
+    color: #16a249;
+}
+.yellow p {
+  color: #f8c630;
+}
+.stat-box small {
+  color: #555;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.charts-container h3 {
+    letter-spacing: -.025em;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.chart-box {
+  background: white;
+  flex: 1 1 400px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  min-width: 320px;
+}
+
+.chart-box h3 {
+  margin-bottom: 0.25rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chart-box small {
+  display: block;
+  margin-bottom: 16px;
+  color: #555;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.dashboard-table {
+  width: 100%;
+}
+.dashboard-table-wrap {
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+text,.recharts-legend-item-text{
+  font-size: 12px;
+}
+
+.arrow-section{
+    padding: 2px 10px;
+    border: solid 1px #16a249;
+    margin-left: 12px;
+    border-radius: 9999px;
+    font-size: .75rem;
+    line-height: 1rem;
+    align-items: center;
+    display: inline-flex;
+    font-weight: 600;
+    color: #16a249;
+}
+.yellow{
+    border-color:#f8c630;
+    color: #f8c630;
+}
+.stat-box:hover {
+    transition-duration: .3s;
+    transform: translate(0, 0) rotate(0) skew(0) skewY(0) scaleX(1.05) scaleY(1.05);
+}
+
+
+/*Live*/
+.feeds-container {
+  background: #FFF;
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.feeds-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.feeds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
+  gap: 16px;
+}
+
+.feed-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  transition: border 0.3s ease;
+  overflow: hidden;
+}
+
+.feed-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+  z-index: 99;
+}
+.feed-card:hover .feed-overlay {
+  opacity: 1;
+}
+
+.zoom-btn {
+  background: #1c1f26;
+  color: #fff;
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s, border-color 0.3s;
+}
+
+.feed-card:hover .zoom-btn {
+  transform: scale(1.1);
+}
+
+.feed-card:hover.status-rec {
+  border: 1px solid #ff4d4d;
+}
+.feed-card:hover.status-live {
+  border: 1px solid #00ff66;
+}
+.feed-card:hover.status-alert {
+  border: 1px solid #ffcc00;
+}
+.feed-card:hover.status-offline {
+  border: 1px solid #777;
+}
+
+.feed-card:hover {
+  transform: translateY(-3px);
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px 2px 0px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  gap: 2px;
+}
+
+.status-badge .dot-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.status-badge.rec {
+  background: #8b0000;
+  color: #ff4d4d;
+}
+
+.status-badge.live {
+  background: #003d00;
+  color: #00ff66;
+}
+
+.status-badge.alert {
+  background: #4d3900;
+  color: #ffcc00;
+}
+
+.status-badge.offline {
+  background: #333;
+  color: #aaa;
+}
+
+.wifi-icon {
+  width: 18px;
+  height: 18px;
+  color: #fe6960;
+}
+
+.camera-icon {
+  width: 48px;
+  height: 48px;
+  color: #666;
+}
+
+.sound-icon {
+  width: 18px;
+  height: 18px;
+  color: #88939c;
+}
+
+.sound-icon.muted {
+  color: #555;
+  opacity: 0.5;
+}
+
+.feed-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feed-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.feed-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.feed-location {
+  font-size: 12px;
+  color: #555;
+  margin-top: 2px;
+}
+.cam-id {
+  font-size: 12px;
+  color: #aaa;
+  margin-right: 8px;
+}
+
+.alert-text {
+  font-size: 11px;
+  color: #ffcc00;
+}
+
+.actions {
+  position: absolute;
+  bottom: 44px;
+  right: 16px;
+  display: flex;
+  gap: 6px;
+}
+
+.action-btn {
+  background: #2c2f36;
+  border: none;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background: #3a3f47;
+}
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
+}
+@keyframes pulse {
+    50% {
+        opacity: .5
+    }
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f9f9f9; 
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.camera-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-placeholder .camera-icon {
+  width: 48px;
+  height: 48px;
+  color: #666;
+}
+
+.video-overlay-header {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.status-offline {
+  background: #f0f0f0 !important;
+  filter: grayscale(70%) brightness(0.7);
+}
+
+
+
+
+@media (max-width: 900px) {
+  .stats-container,
+  .charts-container {
+    flex-direction: column;
+  }
+
+  .stat-box,
+  .chart-box {
+    min-width: auto;
+  }
+  
+  .stat-box {
+    flex: 1 1 100%;
+  }
+}

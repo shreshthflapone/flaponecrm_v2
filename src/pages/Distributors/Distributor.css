@@ -1,0 +1,33 @@
+.add-distributor-container {
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.form-sections {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.form-section {
+    padding: 16px;
+    background: #fcfcfc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+.form-section {
+    transition: transform 0.2s ease;
+}
+.form-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.form-section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 16px;
+}
