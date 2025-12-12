@@ -769,7 +769,7 @@ table {
   background-color: #fafafa;
 }
 .bg8 {
-  background-color: #f5f5f5;
+  background-color: #f9f9f9c4;
 }
 .bg9 {
   background-color: #c00000;
@@ -1026,7 +1026,9 @@ table {
 .ttc {
   text-transform: capitalize;
 }
-
+.br0 {
+  border-radius: 0;
+}
 .br2 {
   border-radius: 2px;
 }
@@ -1120,7 +1122,7 @@ table {
   animation: slideInPopup 0.3s ease;
 }
 .form-group-settings {
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
 .form-group-settings input {
   width: 100%;
@@ -1598,11 +1600,28 @@ td, th {
     color: #e4405f;
 }
 .image-upload-compoenent  {
-  width: 62.9%;
+  width: 50%;
+}
+.affiliate-image.image-upload-compoenent  {
+  width: 100%;
+}
+.affiliate-image .image-upload-container {
+    align-items: flex-start !important;
+    padding: 0 !important;
+}
+.affiliate-image .image-preview {
+  height: 70px !important;
+  max-width: 173px !important;
+  min-height: 85px !important;
+  min-width: 100% !important;
+  width: 100%;
+}
+.distributor-profile-image .image-preview {
+  height: 110px !important;
 }
 @media (min-width: 1024px) {
     .main-content {
-        margin-left: 210px;
+        margin-left: 200px;
     }
 }
 @media (max-width: 1024px) {

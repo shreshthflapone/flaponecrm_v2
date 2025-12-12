@@ -137,7 +137,7 @@ const Header = ({ onToggleSidebar }) => {
             <div className="user-avatar">
               <User className="user-icon" />
             </div>
-            <span className="user-name">{userName || "Guest"}</span>
+            <span className="user-name fs14">{userName || "Guest"}</span>
           </button>
 
           {isDropdownOpen && (
@@ -164,8 +164,8 @@ const Header = ({ onToggleSidebar }) => {
                 <FileBadge className="icon-16" style={{ marginRight: "6px" }} />
                 Privacy Policy
               </button>
-              <button onClick={handleLogout} className="dropdown-item">
-                <MdLogout style={{ marginRight: "6px" }} />
+              <button onClick={handleLogout} className="dropdown-item brd-t2 br0">
+                <MdLogout className="icon-16" style={{ marginRight: "6px" }} />
                 Logout
               </button>
             </div>

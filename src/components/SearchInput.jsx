@@ -32,7 +32,7 @@ function SearchInput({
     <div className="search-input">
       <input
         type="text"
-        placeholder={`Search ${placeholder}`}
+        placeholder={`Enter ${placeholder}`}
         value={inputValue}
         onChange={handleChange}
       />

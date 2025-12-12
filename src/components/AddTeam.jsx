@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SingleDropdown from "./SingleDropdown";
 
-const AddTeam = ({ onClose, editedMember, onSubmit }) => {
+const AddTeam = ({ onClose, editedMember, onSubmit ,editStatus}) => {
   
   // STATIC DROPDOWN OPTIONS  
   const roleOptions = [
@@ -260,7 +260,7 @@ const AddTeam = ({ onClose, editedMember, onSubmit }) => {
           Cancel
         </button>
         <button className="btn-blue update-button" onClick={handleSubmit}>
-          Invite Team
+          {editStatus?"Update employee":"Invite employee"}
         </button>
       </div>
     </>

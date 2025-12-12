@@ -169,9 +169,13 @@ const MyTeam = () => {
   const [searchBy, setSearchBy] = useState("");
   const [searchLabel, setSearchLabel] = useState("Search by");
   const [showSearchInput, setShowSearchInput] = useState(false);
+
+  const [editStatus, setEditStatus] = useState(false);
+  
   
 
   const statusOptions = [
+    { label: "All", value: "" },
     { label: "Active", value: "active" },
     { label: "Inactive", value: "inactive" },
   ];
@@ -218,6 +222,7 @@ const MyTeam = () => {
 
   const handleSearchByChange = (value) => {
     setSearchBy(value);
+    setSearchLabel(value.label);
     setShowSearchInput(true);
   }
 
@@ -226,8 +231,15 @@ const MyTeam = () => {
   }
   
   const openAddTeamPopup = () => {
+    setEditStatus(false);
     setAddTeamPopup(true);
   };
+
+   const openEditTeamPopup = () => {
+    setEditStatus(true);
+    setAddTeamPopup(true);
+  };
+
   const closeAddTeamPopup = () => {
     setAddTeamPopup(false);
   };
@@ -243,10 +255,10 @@ const MyTeam = () => {
   return (
     <>
       <InnerHeader
-        heading="My Team"
-        txtSubHeading="Effortlessly set up your team, inviting and efficiently managing members with different roles."
+        heading="Manage Employees"
+        txtSubHeading="Effortlessly set up your employee, inviting and efficiently managing employee with different roles."
         showButton={true}
-        iconText="Add New Member"
+        iconText="Add Employee"
         onClick={openAddTeamPopup}
       />
       <Card className="bg5 mt16 pb16">
@@ -280,7 +292,7 @@ const MyTeam = () => {
               />
             </div>
             
-            <div className="overview-filter mr12">
+            {/* <div className="overview-filter mr12">
               <Dropdown
                 label={"Overview"}
                 options={teamSortByOverview}
@@ -288,7 +300,7 @@ const MyTeam = () => {
                 onValueChange={handleOverviewChange}
                 clearSignal={clearSignal}
               />
-            </div>
+            </div> */}
 
             <div className="search-by-drp  mr8">
               <Dropdown
@@ -330,51 +342,51 @@ const MyTeam = () => {
               <tr>
                 <th>
                   <p className="box-center cp">
-                    Name&nbsp;/&nbsp;Email
-                    <ArrowUpDown className="ml4" />
+                   Employee <br/>Name&nbsp;/&nbsp;Email
+                    <ArrowUpDown className="ml4 icon-16" />
                   </p>
                 </th>
                 <th>
                   <p className="box-center cp">
                     Role&nbsp;/&nbsp;Dept.
-                    <ArrowUpDown className="ml4" />
+                    <ArrowUpDown className="ml4 icon-16" />
                   </p>
                 </th>
                 <th>
                   <p className="box-center cp">
                     Manager
-                    <ArrowUpDown className="ml4" />
+                    <ArrowUpDown className="ml4 icon-16" />
                   </p>
                 </th>
                 <th>
                   <p className="box-center cp">
                     Designation
-                    <ArrowUpDown className="ml4" />
+                    <ArrowUpDown className="ml4 icon-16" />
                   </p>
                 </th>
                 {/* <th>
                   <p className="box-center cp">
                     Auto&nbsp;Assign
-                    <ArrowUpDown className="ml4" />
+                    <ArrowUpDown className="ml4 icon-16" />
                   </p>
                 </th>
 
                 <th>
                   <p className="box-center cp">
                     Team Visibility
-                    <ArrowUpDown className="ml4" />
+                    <ArrowUpDown className="ml4 icon-16" />
                   </p>
                 </th> */}
                 <th>
                   <p className="box-center cp">
                     Login
-                    <ArrowUpDown className="ml4" />
+                    <ArrowUpDown className="ml4 icon-16" />
                   </p>
                 </th>
                 {/* <th>
                   <p className="box-center cp">
                     Order
-                    <ArrowUpDown className="ml4" />
+                    <ArrowUpDown className="ml4 icon-16" />
                   </p>
                 </th> */}
                 <th>Action</th>
@@ -529,6 +541,7 @@ const MyTeam = () => {
                           verticalAlign: "middle",
                           cursor: "pointer",
                         }}
+                        onClick={openEditTeamPopup}
                       />
                     </Tooltip>
                   </div>
@@ -542,15 +555,16 @@ const MyTeam = () => {
         {addTeamPopup && (
           <Popup
             onClose={closeAddTeamPopup}
-            title={"Add New Member(s)"}
+            title={editStatus?"Update Employee":"Add New Employee(s)"}
             txtSubHeading={
-              "Add new team members - an invite email is sent to each to accept and join the team"
+              "Add new employees - an invite email is sent to each to accept and join the team"
             }
           >
             <AddTeam
               onClose={closeAddTeamPopup}
               editedMember={[]}
               onSubmit={handleTeamMember}
+              editStatus={editStatus}
             />
           </Popup>
         )}
