@@ -1451,6 +1451,7 @@ const AddHotelForm = () => {
                             ></textarea>
                         </div>
                     </div>
+
                 </div>
                 <div className="radio-grp-status box-center fww mt12 mb12">
                     <label htmlFor="active" className="cp v-center mr16 fc13">
@@ -1476,7 +1477,7 @@ const AddHotelForm = () => {
                         Inactive
                     </label>
                 </div>
-                <div className="add-more box-center mt24 mb24">
+                <div className="Hello add-more box-center mt24 mb24">
                     <button
                         type="button"
                         className="btn-blue bg1 br24 fs14 cp pl24 pr24 pt10 pb10 ml24 ls2"
