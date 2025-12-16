@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import InnerHeader from "../../components/InnerHeader";
 import CommonImageUpload from "../../components/commonImageUpload";
 import countryCodeOptions from "../../data/CountryCodes";
-import { FaAngleDown, FaFacebook, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 import { useRef } from "react";
 import SingleDropdown from "../../components/SingleDropdown";
 import DocUpload from "../../components/DocUpload";
@@ -237,45 +237,6 @@ const DistributorForm = () => {
             }
         }
         setPanNumber(value);
-    };
-
-    const setInstagramFun = (value) => {
-        value = value.trim();
-        const instagramRegex = /^(https?:\/\/)?(www\.)?(instagram\.com)\/[A-Za-z0-9._%+-]+$/;
-        if (value) {
-            if (!instagramRegex.test(value)) {
-                toast.warn("Enter valid insta url");
-                return false;
-            }
-            value = value.trim();
-            setInstagram(value);
-        }
-    };
-
-    const setFacebookFun = (value) => {
-        value = value.trim();
-        const facebookRegex = /^(https?:\/\/)?(www\.)?(facebook\.com|fb\.me)\/[A-Za-z0-9._%+-]+$/;
-        if (value) {
-            if (!facebookRegex.test(value)) {
-                toast.warn("Enter valid facebook url");
-                return false;
-            }
-            value = value.trim();
-            setFacebook(value);
-        }
-    };
-
-    const setLinkedinFun = (value) => {
-        value = value.trim();
-        const linkedinRegex = /^(https?:\/\/)?(www\.)?(linkedin\.com)\/in\/[A-Za-z0-9-]+$/;
-        if (value) {
-            if (!linkedinRegex.test(value)) {
-                toast.warn("Enter valid linkedin url");
-                return false;
-            }
-            value = value.trim();
-            setLinkedin(value);
-        }
     };
 
     const setCityFun = (value) => {

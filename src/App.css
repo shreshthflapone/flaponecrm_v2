@@ -330,6 +330,10 @@ table {
   flex: 0 0 22%;
   max-width: 22%;
 }
+.flx24 {
+  flex: 0 0 24%;
+  max-width: 24%;
+}
 .flx25 {
   flex: 0 0 25%;
   max-width: 25%;
@@ -1131,6 +1135,18 @@ table {
   font-size: 14px;
   outline: none;
 }
+.form-group-settings textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 8px;
+    max-width: 100%;
+    outline: none;
+    padding: 13px 12px;
+    resize: none;
+    width: 100%;
+    min-height: 110px;
+}
 .selected-role {
   cursor: pointer;
   padding: 14px;
@@ -1153,7 +1169,7 @@ table {
   border-radius: 0 0 4px 4px;
   border-top: none;
   box-shadow: 0 4px 6px #0000001a;
-  left: 0;
+  left: -1px;
   list-style: none;
   margin: 0;
   max-height: 148px;

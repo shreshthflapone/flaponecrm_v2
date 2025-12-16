@@ -12,6 +12,7 @@ import Loader from './components/Loader.jsx';
 import MyAccount from './pages/MyAccount/MyAccount.jsx';
 import DistributorForm from './pages/Distributors/DistributorForm.jsx';
 import DistributorList from './pages/Distributors/DistributorList.jsx';
+import AddHotelForm from "./pages/Hotel/AddHotelForm.jsx";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -50,6 +51,8 @@ function App() {
                     <Route path="/distributor-list" element={<DistributorList />} />
                     <Route path="/distributor-form" element={<DistributorForm />} />
                     <Route path="/distributor-form/:id" element={<DistributorForm />} />
+                    <Route path="/add-hotel" element={<AddHotelForm />} />
+                    <Route path="/add-hotel/:id" element={<AddHotelForm />} />
                   </Routes>
                 </main>
               </div>

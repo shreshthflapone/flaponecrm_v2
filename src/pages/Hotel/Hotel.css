@@ -1,0 +1,126 @@
+.rooms-table-wrapper {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin: 24px 0 32px;
+    overflow: hidden;
+}
+.room-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.room-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.room-list-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+.room-count {
+    padding: 4px 12px;
+    background: #ffe5db;
+    color: #eb5c23;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.rooms-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.room-form-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+    animation: slideDown 0.3s ease;
+}
+.form-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 24px;
+    position: relative;
+}
+.form-card-header h3 {
+    margin: 0;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.form-card-header .btn-close {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    padding: 4px;
+}
+.room-form {
+    padding: 24px;
+}
+
+.form-tabs {
+    display: flex;
+    gap: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.form-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.form-tab:hover {
+    background-color: #f3f4f6;
+}
+
+.tab-number {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-tab.active {
+    color: #eb5c23;
+    background-color: #eff6ff;
+    font-weight: 600;
+}
+
+.form-tab.active .tab-number {
+    background: #eb5c23;
+    color: #ffffff;
+}
+.listing-img-url .img-urls {
+    flex: 0 0 95%;
+    max-width: 95%;
+}
+
+.scroll-margin {
+  scroll-margin-top: 100px;
+}

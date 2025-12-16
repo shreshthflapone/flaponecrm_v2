@@ -1,4 +1,5 @@
 import "./Distributor.css";
+import React from "react";
 import { useEffect, useState } from "react";
 import InnerHeader from "../../components/InnerHeader";
 import Card from "../../components/Card";
