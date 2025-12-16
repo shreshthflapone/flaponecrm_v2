@@ -13,6 +13,7 @@
     "@googlemaps/markerclusterer": "^2.6.2",
     "@react-google-maps/api": "^2.20.7",
     "@vis.gl/react-google-maps": "^1.5.4",
+    "axios": "^1.13.2",
     "jodit-react": "^5.2.38",
     "lodash": "^4.17.21",
     "lucide-react": "^0.536.0",
