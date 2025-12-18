@@ -24,8 +24,8 @@ const menuStructure = [
           { icon: CircleAlert, label: 'Add New Hotel', path: '/add-hotel' },
           { icon: Users, label: 'Hotel Categories', path: '/hotel-categories' },
           { icon: CircleAlert, label: 'Hotel Brands', path: '/hotel-brands' },
-          { icon: Users, label: 'Cities', path: '/cities' },
-          { icon: CircleAlert, label: 'Hotel Activities', path: '/hotel-activities' },
+          { icon: Users, label: 'Cities', path: '/locations-list' },
+          { icon: CircleAlert, label: 'Hotel Activities', path: '/activities-list' },
         ],
       },
       {

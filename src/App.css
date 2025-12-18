@@ -296,9 +296,21 @@ table {
 .flx2 {
   flex: 2;
 }
+.flx14 {
+  flex: 0 0 14%;
+  max-width: 14%;
+}
+.flx16 {
+  flex: 0 0 16%;
+  max-width: 16%;
+}
 .flx30 {
   flex: 0 0 30%;
   max-width: 30%;
+}
+.flx20 {
+  flex: 0 0 20%;
+  max-width: 20%;
 }
 
 .flx31 {
@@ -525,7 +537,9 @@ table {
 .mr48 {
   margin-right: 48px;
 }
-
+.mb0 {
+  margin-bottom: 0px !important;
+}
 .mb4 {
   margin-bottom: 4px;
 }
@@ -747,10 +761,10 @@ table {
 }
 /* Backgound Color & Font Color Style */
 .bg {
-  background-color: #eb5c23;
+  background-color: #144c97;
 }
 .bg1 {
-  background-color: #eb5c23;
+  background-color: #144c97;
 }
 
 .bg2 {
@@ -819,7 +833,7 @@ table {
 }
 /* font-colors */
 .fc1 {
-  color: #eb5c23;
+  color: #144c97;
 }
 
 .fc2 {
@@ -1241,19 +1255,19 @@ table {
   width: 100% !important;
 }
 .react-datepicker__input-container .react-datepicker__calendar-icon {
-  fill: #eb5c23 !important;
+  fill: #144c97 !important;
   top: 12px !important;
 }
 .css-9jq23d {
-  color: #eb5c23 !important;
+  color: #144c97 !important;
 }
 .css-1p3m7a8-multiValue {
     background-color: #fff !important;
-    border: 1px solid #eb5c23 !important;
-    color: #eb5c23 !important;
+    border: 1px solid #144c97 !important;
+    color: #144c97 !important;
 }
 .css-v7duua:hover {
-    background-color: #eb5c23 !important;
+    background-color: #144c97 !important;
     color: #fff !important;
     border-radius: 0px !important;
 }
@@ -1511,7 +1525,7 @@ tr.even {
     border-top: 10px solid #6edc89;
 }
 .active-tab.due{
-    border-top: 10px solid #d34913;
+    border-top: 10px solid #1d5cad;
 }
 .closebtn {
     background: none;
@@ -1520,7 +1534,7 @@ tr.even {
     margin-left: 5px;
 }
 .close-button:hover {
-    color: #d34913 !important;
+    color: #1d5cad !important;
 }
 
 .image-model-class.hide {
@@ -1538,7 +1552,7 @@ tr.even {
 .main-content {
   flex: 1;
   background-color: #f8fafc;
-  margin-top: 72px;
+  margin-top: 60px;
 }
 .main-content {
     background-color: #fff;
@@ -1650,7 +1664,7 @@ td, th {
         position: fixed;
         transform: translate(0);
         box-shadow: none;
-        top: 72px;
+        top: 60px;
     }
 }
 

@@ -11,7 +11,7 @@
   left: 0;
   right: 0;
   z-index: 30;
-  height: 72px;
+  height: 60px;
 }
 
 .header-left {
@@ -47,7 +47,8 @@
 }
 
 .brand-logo img {
-  width: 150px;
+  max-width: 200px;
+  max-height: 50px;
 }
 
 .header-right {
@@ -117,7 +118,7 @@
 }
 
 .dropdown-item:hover {
-    color: #d75623;
+    color: #144c97;
     border-radius: 0px;
     background-color: transparent;
 }

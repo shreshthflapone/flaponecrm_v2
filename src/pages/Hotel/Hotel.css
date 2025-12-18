@@ -26,8 +26,8 @@
 }
 .room-count {
     padding: 4px 12px;
-    background: #ffe5db;
-    color: #eb5c23;
+    background: #bbcce2;
+    color: #144c97;
     border-radius: 16px;
     font-size: 13px;
     font-weight: 500;
@@ -70,10 +70,14 @@
 .room-form {
     padding: 24px;
 }
-
+.form-tabs-sticky {
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+  background: white;
+}
 .form-tabs {
     display: flex;
-    gap: 12px;
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -81,11 +85,10 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 14px;
+    padding: 8px 20px;
     font-size: 14px;
     color: #6b7280;
     cursor: pointer;
-    border-radius: 6px;
     transition: all 0.2s ease;
 }
 
@@ -107,13 +110,13 @@
 }
 
 .form-tab.active {
-    color: #eb5c23;
+    color: #144c97;
     background-color: #eff6ff;
     font-weight: 600;
 }
 
 .form-tab.active .tab-number {
-    background: #eb5c23;
+    background: #144c97;
     color: #ffffff;
 }
 .listing-img-url .img-urls {
@@ -122,5 +125,5 @@
 }
 
 .scroll-margin {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 120px;
 }

@@ -153,7 +153,7 @@
 }
 
 .btn-confirm {
-  background-color: #e63f3f;
+  background-color: #144c97;
   color: #fff;
 }
 .auto-assign{
@@ -161,6 +161,6 @@
 }
 .myteam-filters .clear,.myteam-filters .clear:hover{
   background: #fdf2ee;
-  border: 1px solid #eb5c23;
-  color: #eb5c23;
+  border: 1px solid #144c97;
+  color: #144c97;
 }

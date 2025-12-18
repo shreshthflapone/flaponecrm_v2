@@ -44,11 +44,11 @@
 }
 
 .dropdown-option:hover {
-  color: #eb5c23;
+  color: #144c97;
 }
 
 .dropdown-option.selected {
-  color: #eb5c23;
+  color: #144c97;
 }
 
 .dropdown-options {

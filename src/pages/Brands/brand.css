@@ -1,0 +1,50 @@
+.status-badge {
+    padding: 2px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.status-badge.active {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #bbf7d0;
+}
+.status-badge.inactive {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #fecaca;
+}
+
+.properties-badge {
+    display: inline-block;
+    padding: 4px 28px;
+    background-color: #e3f2fd;
+    color: #1976D2;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.brand-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+.brand-icon {
+    width: 24px;
+    height: 24px;
+    color: #4f46e5;
+}
+.brand-name .name {
+    font-weight: 500;
+    color: #1e293b;
+}
+.website-link {
+    display: block;
+    font-size: 13px;
+    color: #4f46e5;
+    text-decoration: none;
+}

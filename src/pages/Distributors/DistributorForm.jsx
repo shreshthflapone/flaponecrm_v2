@@ -296,7 +296,7 @@ const DistributorForm = () => {
                 iconText="Distributor List"
                 onClick={handleDistributorList}
             />
-            <div className="account-details mt24 pl20 pr20 df w100 fww settings">
+            <div className="account-details mt24 df w100 fww settings">
                  <div className="batch-main-grp-inputs mb16 v-center jcsb fww  bg8 pl20 pr20 pt20 pb20">
                     <div className="v-center pb24 fww w100">
                         <div className="address-head mb24 w100">

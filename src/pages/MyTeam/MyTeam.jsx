@@ -415,7 +415,7 @@ const MyTeam = () => {
                 <td>
                   <span
                     style={{
-                      color: "#eb5c23",
+                      color: "#144c97",
                       display: "block",
                       fontWeight: 700,
                       fontSize: "14px",

@@ -385,7 +385,7 @@ const AddHotelForm = () => {
                 onClick={() => (window.location.href = "/")}
             />
 
-            <div className="account-details mt24 pl20 pr20 w100 settings">
+            <div className="account-details mt24 w100 settings">
                 <div className="form-tabs df mb16">
                     <div
                         className={`form-tab ${activeTab === "basic" ? "active" : ""}`}

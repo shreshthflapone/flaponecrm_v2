@@ -13,6 +13,15 @@ import MyAccount from './pages/MyAccount/MyAccount.jsx';
 import DistributorForm from './pages/Distributors/DistributorForm.jsx';
 import DistributorList from './pages/Distributors/DistributorList.jsx';
 import AddHotelForm from "./pages/Hotel/AddHotelForm.jsx";
+import CategoryList from "./pages/Categories/categoryList.jsx";
+import CategoryForm from "./pages/Categories/categoryForm.jsx";
+import HotelBrand from "./pages/Brands/HotelBrand.jsx";
+import BrandGroupForm from "./pages/Brands/BrandGroupForm.jsx";
+import SubBrandForm from "./pages/Brands/SubBrandForm.jsx";
+import ActivitiesForm from "./pages/Activities/ActivitiesForm.jsx";
+import ActivitiesList from "./pages/Activities/ActivitiesList.jsx";
+import LocationList from "./pages/Locations/LocationList.jsx";
+import LocationForm from "./pages/Locations/LocationForm.jsx";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -53,6 +62,21 @@ function App() {
                     <Route path="/distributor-form/:id" element={<DistributorForm />} />
                     <Route path="/add-hotel" element={<AddHotelForm />} />
                     <Route path="/add-hotel/:id" element={<AddHotelForm />} />
+                    <Route path="/hotel-categories" element={<CategoryList />} />
+                    <Route path="/add-hotel-category" element={<CategoryForm />} />
+                    <Route path="/add-hotel-category/:id" element={<CategoryForm />} />
+                    <Route path="/hotel-brands" element={<HotelBrand />} />
+                    <Route path="/hotel-brands/:id" element={<HotelBrand />} />
+                    <Route path="/brand-group-form" element={<BrandGroupForm />} />
+                    <Route path="/brand-group-form/:id" element={<BrandGroupForm />} />
+                    <Route path="/sub-brand-form" element={<SubBrandForm />} />
+                    <Route path="/sub-brand-form/:id" element={<SubBrandForm />} />
+                    <Route path="/add-activity" element={<ActivitiesForm />} />
+                    <Route path="/add-activity/:id" element={<ActivitiesForm />} />
+                    <Route path="/activities-list" element={<ActivitiesList />} />
+                    <Route path="/locations-list" element={<LocationList />} />
+                    <Route path="/add-location" element={<LocationForm />} />
+                    <Route path="/add-location/:id" element={<LocationForm />} />
                   </Routes>
                 </main>
               </div>

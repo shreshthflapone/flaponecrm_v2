@@ -789,31 +789,33 @@ const AddHotelForm = () => {
                 onClick={() => (window.location.href = "/")}
             />
 
-            <div className="account-details mt24 pl20 pr20 w100 settings">
-                <div className="form-tabs df mb16">
-                    {tabs.map((tab, index) => (
-                        <div
-                            key={tab.id}
-                            className={`form-tab ${activeTab === tab.id ? "active" : ""}`}
-                            onClick={() => scrollToSection(
-                                tab.id === "basic"
-                                    ? basicInfoRef
-                                    : tab.id === "location"
-                                    ? locationRef
-                                    : tab.id === "rooms"
-                                    ? roomRef
-                                    : tab.id === "media"
-                                    ? mediaRef
-                                    : tab.id === "policies"
-                                    ? policiesRef
-                                    : null,
-                                tab.id
-                            )}
-                        >
-                            <span className="tab-number">{index + 1}</span>
-                            {tab.label}
-                        </div>
-                    ))}
+            <div className="account-details mt24 w100 settings">
+                  <div className="form-tabs-sticky">
+                    <div className="form-tabs df mb16">
+                        {tabs.map((tab, index) => (
+                            <div
+                                key={tab.id}
+                                className={`form-tab ${activeTab === tab.id ? "active" : ""}`}
+                                onClick={() => scrollToSection(
+                                    tab.id === "basic"
+                                        ? basicInfoRef
+                                        : tab.id === "location"
+                                        ? locationRef
+                                        : tab.id === "rooms"
+                                        ? roomRef
+                                        : tab.id === "media"
+                                        ? mediaRef
+                                        : tab.id === "policies"
+                                        ? policiesRef
+                                        : null,
+                                    tab.id
+                                )}
+                            >
+                                <span className="tab-number">{index + 1}</span>
+                                {tab.label}
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="batch-main-grp-inputs mb16 v-center jcsb fww bg8 pl20 pr20 pt20 pb20">
@@ -1067,7 +1069,6 @@ const AddHotelForm = () => {
                                 search={true}
                             />
                         </div>
-
                         <div className="form-group-settings flx24 mr8">
                             <SingleDropdownMultiSearch
                                 label="State"
@@ -1079,7 +1080,6 @@ const AddHotelForm = () => {
                                 search={true}
                             />
                         </div>
-
                         <div className="form-group-settings flx24 mr8">
                             <SingleDropdownMultiSearch
                                 label="City"
@@ -1133,7 +1133,7 @@ const AddHotelForm = () => {
                                         <h3>Add New Room</h3>
                                         <button type="button" class="btn-close"><X className="icon-16 cp" onClick={handleCloseAddRoomForm} /></button>
                                     </div>
-                                    <div className="room-form v-center fww w100">
+                                    <div className="room-form v-center fww w100 brd-b1">
                                         <div className="form-group-settings name flx31 mr8">
                                             <p className="fc15 fw6 fs14 ls1">Room Name</p>
                                             <input
@@ -1285,6 +1285,15 @@ const AddHotelForm = () => {
                                                 />
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="add-more box-center mt24 mb24 jce">
+                                        <button class="btn-cancel" onClick={handleCloseAddRoomForm}>Cancel</button>
+                                        <button
+                                            type="button"
+                                            className="btn-blue bg1 br24 fs14 cp pl24 pr24 pt10 pb10 ls2"
+                                        >
+                                            Submit
+                                        </button>
                                     </div>
                                 </div>
                             </div>)}

@@ -39,7 +39,7 @@ body, html {
 }
 
 .sign-in-microsoft {
-  background-color: #eb5c23;
+  background-color: #144c97;
   color: #fff;
   border-radius: 4px;
   border: none;
@@ -88,7 +88,7 @@ body, html {
   user-select: none;
 }
 .login-email {
-  background-color: #eb5c23;
+  background-color: #144c97;
   color: #fff;
   border-radius: 64px;
   border: none;
@@ -164,7 +164,7 @@ body, html {
   margin-bottom: 20px;
 }
 .remember-forgot a {
-  color: #eb5c23 !important;
+  color: #144c97 !important;
 }
 .login-button {
   border: none;
@@ -266,7 +266,7 @@ body, html {
 }
 
 .otp-btn:hover {
-  background-color: #d34913;
+  background-color: #1d5cad;
 }
 
 .otp-resend {
@@ -276,7 +276,7 @@ body, html {
 }
 
 .otp-resend span {
-  color: #eb5c23;
+  color: #144c97;
   cursor: pointer;
   font-weight: 500;
 }

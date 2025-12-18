@@ -6,7 +6,7 @@
   height: 100vh;
   position: fixed;
   left: 0;
-  top: 72px;
+  top: 60 px;
   overflow-y: auto;
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
@@ -100,7 +100,7 @@
 
 .nav-item-active, .nav-item:hover {
     background-color: #f9f9f9c4;
-    color: #ec6732;
+    color: #144c97;
     border-left: solid 3px;
     margin-left: 4px;
 }

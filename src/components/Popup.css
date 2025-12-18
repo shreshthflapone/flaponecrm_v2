@@ -54,13 +54,13 @@
   transition: background-color 0.2s ease-in-out;
 }
 .btn-confirm {
-  background-color: #e63f3f;
+  background-color: #144c97;
   color: #fff;
 }
 .btn-cancel {
-  background: #fdf2ee;
-  border: 1px solid #f4836c;
-  color: #f4836c;
+  background: #bbcce2;
+  border: 1px solid #144c97;
+  color: #144c97;
   font-weight: 600;
   letter-spacing: 0.4px;
 }
