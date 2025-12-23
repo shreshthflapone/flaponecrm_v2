@@ -138,6 +138,10 @@
     font-size: 14px;
     font-weight: 500;
 }
+.category-badge.resort-badge{
+    color: #fea25a;
+    background: #fdf3eb;
+}
 /* Image + avatar wrapper */
 .hotel-avatar {
   width: 40px;

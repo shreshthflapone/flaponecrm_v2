@@ -14,6 +14,7 @@ const hotelList = [
     featured_image:
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=200&q=80",
     hotel_name: "Aurika, Udaipur - Luxury by Lemon Tree Hotels",
+    hotel_website:"https://www.hotel_website.com/",
     hotel_city: "Udaipur",
     hotel_state: "Rajasthan",
     hotel_country: "India",
@@ -27,6 +28,7 @@ const hotelList = [
     id: 9,
     featured_image: "",
     hotel_name: "Sunrise Plaza Hotel",
+    hotel_website:"https://www.hotel_website.com/",
     hotel_city: "Jaipur",
     hotel_state: "Rajasthan",
     hotel_country: "India",
@@ -41,6 +43,7 @@ const hotelList = [
     featured_image:
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=200&q=80",
     hotel_name: "Lakeview Retreat",
+    hotel_website:"https://www.hotel_website.com/",
     hotel_city: "Noida",
     hotel_state: "Uttar Pradesh",
     hotel_country: "India",
@@ -54,6 +57,7 @@ const hotelList = [
     id: 7,
     featured_image: "",
     hotel_name: "Himalayan Heights Resort",
+    hotel_website:"https://www.hotel_website.com/",
     hotel_city: "Shimla",
     hotel_state: "Himachal Pradesh",
     hotel_country: "India",
@@ -67,6 +71,7 @@ const hotelList = [
     id: 6,
     featured_image: "",
     hotel_name: "City Center Inn",
+    hotel_website:"https://www.hotel_website.com/",
     hotel_city: "Gurugram",
     hotel_state: "Haryana",
     hotel_country: "India",
@@ -107,6 +112,7 @@ const hotelList = [
     id: 3,
     featured_image: "",
     hotel_name: "Desert Dunes Resort",
+    hotel_website:"https://www.hotel_website.com/",
     hotel_city: "Jaisalmer",
     hotel_state: "Rajasthan",
     hotel_country: "India",
@@ -156,6 +162,21 @@ const HotelList = () => {
     const [sortBy, setSortBy] = useState("id");
     const [sortDirection, setSortDirection] = useState("desc");
     const [activeSortColumn, setActiveSortColumn] = useState("id");
+
+    const AVATAR_COLORS = [
+        "#EF4444", "#F97316", "#F59E0B", "#10B981", "#3B82F6",
+        "#6366F1", "#8B5CF6", "#EC4899", "#14B8A6", "#0EA5E9",
+    ];
+
+    const getColorFromString = (str = "") => {
+        if (!str) return "#6366F1";
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        const index = Math.abs(hash) % AVATAR_COLORS.length;
+        return AVATAR_COLORS[index];
+    };
 
     const [filters, setFilters] = useState({
         hotel_name: "",
@@ -369,7 +390,6 @@ const HotelList = () => {
 
     return data;
   }, [filters, sortConfig]);
-
     const renderHotelImage = (hotel) => {
         if (hotel.featured_image) {
             return (
@@ -380,13 +400,16 @@ const HotelList = () => {
         }
 
         const initial = hotel.hotel_name?.charAt(0)?.toUpperCase() || "?";
+        const bgColor = getColorFromString(hotel.hotel_name || String(hotel.id));
 
         return (
-            <span className="hotel-avatar avatar-fallback">
-                {initial}
-            </span>
+            <span
+                className="hotel-avatar avatar-fallback"
+                style={{ backgroundColor: bgColor }}
+            >{initial}</span>
         );
     };
+
 
     const handleSortByChange = (field) => {
         setSortConfig((prev) => {
@@ -510,8 +533,11 @@ const HotelList = () => {
                   <td>{hotel.id}</td>
                   <td>
                     <div className="df v-center">
-                      {renderHotelImage(hotel)}
-                      <span className="hotel-name">{hotel.hotel_name}</span>
+                        {renderHotelImage(hotel)}
+                        <div className="fdc">
+                            <div className="hotel-name tal">{hotel.hotel_name}</div>
+                            {hotel.hotel_website !== "" && <a href={hotel.hotel_website} target="_blank" rel="noopener noreferrer" class="website-link tal">{hotel.hotel_website}</a>}
+                        </div>
                     </div>
                   </td>
                   <td>
@@ -520,15 +546,15 @@ const HotelList = () => {
                       {hotel.hotel_city}
                     </span>
                     <br />
-                    <span>
+                    <span className="fc5">
                       ({hotel.hotel_state}, {hotel.hotel_country})
                     </span>
                   </td>
                   <td>{hotel.hotel_pincode}</td>
                   <td>
                     <div
-                      className="category-badge"
-                      style={{ textTransform: "capitalize" }}
+                        className={`category-badge ${hotel.category_name === "resort" ? "resort-badge" : ""}`}
+                        style={{ textTransform: "capitalize" }}
                     >
                       {hotel.category_name}
                     </div>
