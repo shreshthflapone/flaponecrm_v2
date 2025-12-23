@@ -20,7 +20,7 @@ const menuStructure = [
         heading: 'Hotel Management',
         icon: Hotel,
         items: [
-          { icon: Users, label: 'Hotel Listing', path: '/customers' },
+          { icon: Users, label: 'Hotel Listing', path: '/hotel-list' },
           { icon: CircleAlert, label: 'Add New Hotel', path: '/add-hotel' },
           { icon: Users, label: 'Hotel Categories', path: '/hotel-categories' },
           { icon: CircleAlert, label: 'Hotel Brands', path: '/hotel-brands' },

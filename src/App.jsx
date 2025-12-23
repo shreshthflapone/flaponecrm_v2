@@ -22,6 +22,7 @@ import ActivitiesForm from "./pages/Activities/ActivitiesForm.jsx";
 import ActivitiesList from "./pages/Activities/ActivitiesList.jsx";
 import LocationList from "./pages/Locations/LocationList.jsx";
 import LocationForm from "./pages/Locations/LocationForm.jsx";
+import HotelList from "./pages/Hotel/HotelList.jsx";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -60,6 +61,7 @@ function App() {
                     <Route path="/distributor-list" element={<DistributorList />} />
                     <Route path="/distributor-form" element={<DistributorForm />} />
                     <Route path="/distributor-form/:id" element={<DistributorForm />} />
+                    <Route path="/hotel-list" element={<HotelList />} />
                     <Route path="/add-hotel" element={<AddHotelForm />} />
                     <Route path="/add-hotel/:id" element={<AddHotelForm />} />
                     <Route path="/hotel-categories" element={<CategoryList />} />

@@ -20,44 +20,44 @@ const CategoryList = () => {
                 onClick={() => (window.location.href = "/add-hotel-category")}
             />
             <div class="booked table-container df w100 fdc mt16" style={{ overflow: "auto" }}>
-            <table>
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Category Name</th>
-                    <th>Parent Category</th>
-                    <th>Status</th>
-                    <th>Created Date</th>
-                    <th>Updated Date</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                {categories.length === 0 ? (
+                <table>
+                    <thead>
                     <tr>
-                    <td colSpan="7" className="empty-cell">
-                        No categories added yet
-                    </td>
+                        <th>ID</th>
+                        <th>Category Name</th>
+                        <th>Parent Category</th>
+                        <th>Status</th>
+                        <th>Created Date</th>
+                        <th>Updated Date</th>
+                        <th>Actions</th>
                     </tr>
-                ) : (
-                    categories.map((cat) => (
-                    <tr key={cat.id}>
-                        <td>{cat.id}</td>
-                        <td>{cat.name}</td>
-                        <td>{cat.parent_category}</td>
-                        <td>{cat.status === "1" ? "Active" : "Inactive"}</td>
-                        <td>{cat.created_date}</td>
-                        <td>{cat.updated_date}</td>
-                        <td>
-                        <Pencil className="icon-16 mr8 cp" />
-                        <Trash2 className="icon-16 cp" />
+                    </thead>
+
+                    <tbody>
+                    {categories.length === 0 ? (
+                        <tr>
+                        <td colSpan="7" className="empty-cell">
+                            No categories added yet
                         </td>
-                    </tr>
-                    ))
-                )}
-                </tbody>
-            </table>
+                        </tr>
+                    ) : (
+                        categories.map((cat) => (
+                        <tr key={cat.id}>
+                            <td>{cat.id}</td>
+                            <td>{cat.name}</td>
+                            <td>{cat.parent_category}</td>
+                            <td>{cat.status === "1" ? "Active" : "Inactive"}</td>
+                            <td>{cat.created_date}</td>
+                            <td>{cat.updated_date}</td>
+                            <td>
+                            <Pencil className="icon-16 mr8 cp" />
+                            <Trash2 className="icon-16 cp" />
+                            </td>
+                        </tr>
+                        ))
+                    )}
+                    </tbody>
+                </table>
             </div>
         </>
     );

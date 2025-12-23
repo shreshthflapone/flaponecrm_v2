@@ -704,6 +704,30 @@ const AddHotelForm = () => {
         setAdditionalGuidelines(value);
     };
 
+    const handleAdditionalActivityChange = (value) => {
+        setHotelFormData((prev) => ({
+            ...prev,
+            additional_activities: value,
+        }));
+    }
+
+    const handleHotelDescriptionChange = (value) => {
+        setHotelFormData((prev) => ({
+            ...prev,
+            description: value,
+        }));
+    }
+
+    const handleRoomDescriptionChange = (value) => {
+        setHotelFormData(prev => ({
+            ...prev,
+            room: {
+                ...prev.room,
+                room_description: value,
+            },
+        }));
+    }
+
     const handleSelectIndoorActivitiessdas = (option) => {
         console.log("option = ", option);
         if (!option) return;
@@ -964,16 +988,14 @@ const AddHotelForm = () => {
                                 autoComplete="off"
                             />
                         </div>
-                        <div className="form-group-settings name flx1 mr8  ">
-                            <p className="fc15 fw6 fs14 ls1">Hotel Description</p>
-                            <textarea
-                                id="hotelDescription"
-                                name="description"
-                                placeholder="Enter hotel description"
-                                value={hotelFormData.description}
-                                onChange={handleInputChange}
-                                autoComplete="off"
-                            ></textarea>
+                        <div className="form-group-settings chapter-name flx100">
+                            <p className="fc15 fw6 fs14 ls1 mb8">Hotel Description</p>
+                            <div className="jodit-editor">
+                                <HtmlEditor
+                                    descValue={hotelFormData.description}
+                                    onChange={(value) => handleHotelDescriptionChange(value)}
+                                />
+                            </div>
                         </div>
                         <div className="address-head mb16 w100">
                             <p className="fs14 fw6 fc14 ls1 lh22">Property Contact Details</p>
@@ -1251,16 +1273,14 @@ const AddHotelForm = () => {
                                                 onSelect={(opt) => handleRoomDropdownChange("room_status", opt)}
                                             />
                                         </div>
-                                        <div className="form-group-settings name w100 mr8  ">
-                                            <p className="fc15 fw6 fs14 ls1">Room Description</p>
-                                            <textarea
-                                                id="roomDescription"
-                                                name="room_description"
-                                                placeholder="Enter Room description"
-                                                value={hotelFormData.room.room_description}
-                                                onChange={handleRoomInputChange}
-                                                autoComplete="off"
-                                            ></textarea>
+                                        <div className="form-group-settings chapter-name flx100">
+                                            <p className="fc15 fw6 fs14 ls1 mb8">Room Description</p>
+                                            <div className="jodit-editor">
+                                                <HtmlEditor
+                                                    descValue={hotelFormData.room.room_description}
+                                                    onChange={(value) => handleRoomDescriptionChange(value)}
+                                                />
+                                            </div>
                                         </div>
                                         <div className="upload-image v-center flx100 mb16 df">
                                             <p className="flx33 fc15 fw6 fs14 mb12 ls1">Featured Photo</p>
@@ -1447,17 +1467,14 @@ const AddHotelForm = () => {
                                 chips={2}
                             />
                         </div>
-
-                        <div className="form-group-settings name w100 mr8  ">
-                            <p className="fc15 fw6 fs14 ls1">Additional Activities or Notes</p>
-                            <textarea
-                                id="additional_activities"
-                                name="additional_activities"
-                                placeholder="Add any additional activities or special notes..."
-                                value={hotelFormData.additional_activities}
-                                onChange={handleInputChange}
-                                autoComplete="off"
-                            ></textarea>
+                        <div className="form-group-settings chapter-name flx100">
+                            <p className="fc15 fw6 fs14 ls1 mb8">Additional Activities or Notes</p>
+                            <div className="jodit-editor">
+                                <HtmlEditor
+                                    descValue={hotelFormData.additional_activities}
+                                    onChange={(value) => handleAdditionalActivityChange(value)}
+                                />
+                            </div>
                         </div>
                     </div>
 

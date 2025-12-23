@@ -50,7 +50,7 @@ const LocationList = () => {
                 onClick={() => (window.location.href = "/add-location")}
             />
 
-            <div className="myteam-filters v-center jcsb pl16 pr16 brd-b1 pb8 pt8 fww fs12 ">
+            <div className="myteam-filters v-center jcsb pr16 brd-b1 pb8 pt8 fww fs12 ">
                 <div className="left-side-filter v-center w100 fww">
                     <div className="form-group-settings name mb0 flx14 mr8">
                         <input

@@ -188,7 +188,7 @@ const LocationForm = () => {
                             </div>
 
                             <div className="form-group-settings flx31 mr8">
-                                <p className="fc15 fw6 fs14 ls1">City</p>
+                                <p className="fc15 fw6 fs14 ls1">Base Markup Value</p>
                                 <input
                                     type="text"
                                     name="city"
